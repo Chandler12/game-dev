@@ -1,0 +1,15 @@
+
+<body onkeydown=
+
+
+
+
+
+
+<img id=myImage01" width=100 src"" style="position:abosolute;top:100;left:50;">
+
+<input type=button value="Go Right"onclick="{
+
+document.getElementbyId('myImage01').style.left='150px'
+
+}">

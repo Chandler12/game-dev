@@ -1,0 +1,28 @@
+<html>
+
+Ham And Cheese Sandwiches<br></br>
+
+Single Web page<br></br>
+
+<body>
+
+<img width=300 src="cute-kitty.jpg">
+
+<ol>
+<li>
+</ol>
+
+<table border=1>
+<tr><td>Chandler</td></tr>
+</table>
+
+<a href="https://en.wikipedia.org/wiki/Ham_and_cheese_sandwich">Ham-and-Cheese-Sandwich</a>
+
+
+<input id="mytext01" type=text value="Chandler">
+
+
+
+
+
+</body>

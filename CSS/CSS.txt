@@ -1,0 +1,15 @@
+<h2 align=center>CSS by Chandler</h2>
+Not CSS ,b style="">yes CSS</b> not CSS<br><br><br>
+
+
+
+
+
+
+Not cool <b id="myB1" style="color:red; background-color:green" onMouseOver="{
+ 
+document.getElementById('myB1').innerHTML = 'changed'
+
+}" onMouseOut="="{
+  document.getElementById('myB1').innerHTML = 'really cool'
+}"> really cool</b> not cool again

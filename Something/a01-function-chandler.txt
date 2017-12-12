@@ -1,0 +1,18 @@
+<script>
+
+function myCubeBetter(x){
+return x*x*x
+
+}
+
+</script>
+
+<input id="myName01" type=textvalue="Chandler" >
+
+<div id="myDivOut01">....</div>
+
+<input type=button value="Cube the number"onClick="{
+document.getElementBYId('myDivOut01').innerHTML=
+  myCubeBetter(document.getElementById("myName01').value);
+
+}">

@@ -1,0 +1,9 @@
+
+
+
+
+<input type=button value="Go Right" onclick="{
+  setTimeout('function(){
+   alert('hi 3 seconds later')
+},3000)
+}">
