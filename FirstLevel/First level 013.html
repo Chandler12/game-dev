@@ -1,0 +1,197 @@
+
+<style>
+
+
+.img-hor {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+function myCollide(my1, my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) && (bottom1 >=  top2   ) && (left1   <=  right2 ) && (top1    <=  bottom2) ){
+       return true
+   }
+}
+</script>
+
+<img  id="myF"  src="JUNKYARD.gif"  style="position:absolute; width:300px; height:200px; left:450px; top:25px">
+
+<img  id="myC"  src="download.png"  style="position:absolute; width:200px; height:200px; left:200px; top:550px">
+
+<img  id="myD"  src="Tires.png"  style="position:absolute; width:200px; height:200px; left:500px; top:300px">
+
+<img  id="myE"  src="trash.png"  style="position:absolute; width:250px; height:250px; left:1000px; top:100px">
+
+
+<img  id="myB"  src="face.gif"   class="" style="position:absolute; width:187px; height:187px; left:64px; top:64px">
+
+<img  id="myA"  src="people.gif" class="" style="position:absolute; width:187px; height:187px; left:1064px; top:700px"> 
+
+
+
+
+
+
+
+
+
+
+<body onkeydown="{
+      if (String.fromCharCode(event.keyCode) ==  'I' ){
+         document.getElementById('myA').style.top =  parseInt(document.getElementById('myA').style.top) + -50 +'px'
+            if (parseInt(document.getElementById('myA').style.top) <= 100 ){document.getElementById('myA').style.top= '30px'} 
+   }
+   if (String.fromCharCode(event.keyCode) ==  'J' ){
+   
+         document.getElementById('myA').className = 'img-hor';
+
+
+         document.getElementById('myA').style.left =  parseInt(document.getElementById('myA').style.left) + -50 +'px'
+            if (parseInt(document.getElementById('myA').style.left) <= 100 ){document.getElementById('myA').style.left = '30px'} 
+   }
+ if (String.fromCharCode(event.keyCode) ==  'K' ){
+         document.getElementById('myA').style.top =  parseInt(document.getElementById('myA').style.top) + +50 +'px'
+            if (parseInt(document.getElementById('myA').style.top)  >=717.5 ){document.getElementById('myA').style.top= '717.5px'} 
+         
+}
+ 
+  if (String.fromCharCode(event.keyCode) ==  'L' ){
+
+
+         document.getElementById('myA').className = '';
+
+
+         document.getElementById('myA').style.left =  parseInt(document.getElementById('myA').style.left) + +50 +'px'
+            if (parseInt(document.getElementById('myA').style.left)  >= 1030){document.getElementById('myA').style.left= '1030px'} 
+             
+   }
+      if (String.fromCharCode(event.keyCode) ==  'W' ){
+         document.getElementById('myB').style.top =  parseInt(document.getElementById('myB').style.top) + -50 +'px'
+            if (parseInt(document.getElementById('myB').style.top) <= 100 ){document.getElementById('myB').style.top= '30px'} 
+          
+   }
+   if (String.fromCharCode(event.keyCode) ==  'A' ){
+         
+            document.getElementById('myB').className = 'img-hor';
+
+          document.getElementById('myB').style.left =  parseInt(document.getElementById('myB').style.left) + -50 +'px'
+            if (parseInt(document.getElementById('myB').style.left) <= 100 ){document.getElementById('myB').style.left = '30px'} 
+   
+   }
+ if (String.fromCharCode(event.keyCode) ==  'S' ){
+         document.getElementById('myB').style.top =  parseInt(document.getElementById('myB').style.top) + +50 +'px'
+            if (parseInt(document.getElementById('myB').style.top)  >=717.5 ){document.getElementById('myB').style.top= '717.5px'} 
+        
+  }
+ 
+  if (String.fromCharCode(event.keyCode) ==  'D' ){
+        
+document.getElementById('myB').className = '';
+
+document.getElementById('myB').style.left =  parseInt(document.getElementById('myB').style.left) + +50 +'px'
+            if (parseInt(document.getElementById('myB').style.left)  >= 1030){document.getElementById('myB').style.left= '1030px'} 
+          
+  }
+
+
+document.getElementById('myOut01').innerHTML = document.getElementById('myB').style.left + ' ,  '+ document.getElementById('myB').style.left
+
+document.getElementById('myOut02').innerHTML = document.getElementById('myA').style.left + ' ,  '+ document.getElementById('myA').style.left
+
+
+if (myCollide('myA', 'myB')  == true) {
+   document.getElementById('myOut01').innerHTML =  'YOU HIT ME'   
+   location = 'http://www.google.ca'
+}
+
+
+
+
+if (myCollide('myA', 'myC')  == true) {
+   document.getElementById('myOut01').innerHTML =  'A HIT ME C'   
+   document.getElementById('myA').style.left = '600px'
+   document.getElementById('myA').style.top = '600px'
+}
+
+
+
+
+if (myCollide('myB', 'myC')  == true) {
+   document.getElementById('myOut01').innerHTML =  'B HIT ME C'   
+   document.getElementById('myB').style.left = '20px'
+   document.getElementById('myB').style.top = '20px'
+}
+
+
+
+if (myCollide('myB', 'myD')  == true) {
+   document.getElementById('myOut01').innerHTML =  'B HIT ME C'   
+   document.getElementById('myB').style.left = '20px'
+   document.getElementById('myB').style.top = '20px'
+}
+
+if (myCollide('myA', 'myD')  == true) {
+   document.getElementById('myOut01').innerHTML =  'A HIT ME C'   
+   document.getElementById('myA').style.left = '1064px'
+   document.getElementById('myA').style.top = '600px'
+}
+
+
+if (myCollide('myA', 'myE')  == true) {
+   document.getElementById('myOut01').innerHTML =  'A HIT ME C'   
+   document.getElementById('myA').style.left = '1064px'
+   document.getElementById('myA').style.top = '600px'
+}
+
+
+
+if (myCollide('myB', 'myE')  == true) {
+   document.getElementById('myOut01').innerHTML =  'B HIT ME C'   
+   document.getElementById('myB').style.left = '20px'
+   document.getElementById('myB').style.top = '20px'
+}
+
+
+
+
+
+
+
+
+
+}">
+
+<br><br><br><br>
+
+<div id="myOut01">....</div>
+
+<div id="myOut02">....</div>
+
+
+
+
+
+
